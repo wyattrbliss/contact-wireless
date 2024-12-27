@@ -4,7 +4,7 @@ import { useCallback } from 'react';
 import './Nav.less';
 
 export function Nav() {
-    const tabs = ['home', 'about', 'towers', 'contact'];
+    const tabs = ['about', 'towers', 'contact'];
 
     const onTabSelect = useCallback((tab: string) => {
         const section = document.getElementById(tab);
