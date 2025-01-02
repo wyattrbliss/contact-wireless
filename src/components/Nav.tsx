@@ -1,28 +1,23 @@
 import { Link } from 'react-router';
+import { scrollToSection } from '../utils';
+import './Nav.less';
 import { useCallback } from 'react';
 
-import './Nav.less';
+interface NavProps {
+    callback?: () => void;
+}
 
-export function Nav() {
-    const tabs = ['about', 'towers', 'contact'];
+export function Nav({ callback }: NavProps) {
+    const tabs = ['home', 'about', 'towers', 'contact'];
 
-    const onTabSelect = useCallback((tab: string) => {
-        const section = document.getElementById(tab);
-        if (section) {
-            section.scrollIntoView({behavior: 'smooth'});
-        } else {
-
-            // allow time for routing
-            setTimeout(() => {
-                const section = document.getElementById(tab);
-                section?.scrollIntoView({behavior: 'smooth'})
-            }, 500);
-        }
-    }, [document]);
+    const handleClick = useCallback((tab: string) => {
+        callback?.();
+        scrollToSection(tab)
+    }, [callback, scrollToSection])
 
     return (
         <div className={`nav`}>
-            {tabs.map((tab, i) => <Link to={'/'} className={`tab`} key={`${tab}-${i}`} onClick={() => onTabSelect(tab)}>{tab.toUpperCase()}</Link>)}
+            {tabs.map((tab, i) => <Link to={'/'} className={`tab`} key={`${tab}-${i}`} onClick={() => handleClick(tab)}>{tab.toUpperCase()}</Link>)}
         </div>
     )
 }

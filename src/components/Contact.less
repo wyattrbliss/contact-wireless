@@ -1,2 +1,38 @@
-.contact-container {
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-number {
+    font-size: 42px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom right, #e6ebef, white);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.email-sub-header {
+    font-size: 12px;
+    padding: -16px 16px;
+}
+
+.contact-comment-box {
+    max-width: 100%;
+    height: 100px;
+    text-align: start;
+}
+
+.contact-form-buttons {
+    display: inline-flex;
+    gap: 16px;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-container {
+        max-width: 100%;
+    }
 }
