@@ -54,6 +54,7 @@ export function parseTowerData() {
 }
 
 const TOWER_DATA =
+// Headers
 'City,State,Elevation (Ft MSL),ASR #,Height (Ft),Top (HAAT),Latitude,Longitude' + '\n' +
 // MN
 'Brainerd,MN,1256,1022695,350,375,46.3222222,-94.16250000000001' + '\n' +

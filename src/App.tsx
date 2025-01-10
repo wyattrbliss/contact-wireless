@@ -6,7 +6,7 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import towerSunset from './assets/tower-sunset.jpg';
 import towerPNG from './assets/tower.png';
-import towerInField from './assets/tower-in-field-craig-garnham.jpg';
+// import towerInField from './assets/tower-in-field-craig-garnham.jpg';
 import { Home } from './components/Home';
 
 function App() {
@@ -14,19 +14,21 @@ function App() {
     	<>
 			<Header />
 			<div className={`content-container`}>
-				<section id='home'>
-					<Home />
-				</section>
-				<section id='about'>
-					<About />
-				</section>
-				<section id='towers'>
-					<Towers />
-				</section>
-				<section id='contact'>
-					<Contact />
-				</section>
-				<Footer />
+				<div className={`sections-container`}>
+					<section id='home'>
+						<Home />
+					</section>
+					<section id='about'>
+						<About />
+					</section>
+					<section id='towers'>
+						<Towers />
+					</section>
+					<section id='contact'>
+						<Contact />
+					</section>
+				</div>
+				
 				<div className={`tower-sunset-container`}>
                 	<img src={towerSunset} alt='Tower with sunset background'/>
 				</div>
@@ -37,6 +39,7 @@ function App() {
 					<img src={towerInField} />
 				</div> */}
 			</div>
+			<Footer />
 		</>
   	)
 }
