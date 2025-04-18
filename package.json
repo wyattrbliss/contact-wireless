@@ -1,5 +1,6 @@
 {
   "name": "contact-wireless",
+  "homepage": "https://wyattrbliss.github.io/contact-wireless",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,10 +8,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "csv-loader": "^3.0.5",
+    "gh-pages": "^6.3.0",
     "leaflet": "^1.9.4",
     "less": "^4.2.1",
     "papaparse": "^5.4.1",

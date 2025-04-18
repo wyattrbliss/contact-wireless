@@ -7,4 +7,5 @@ export interface TowerData {
     top: string;
     latitude: string;
     longitude: string;
+    description: string;
 }

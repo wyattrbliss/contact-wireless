@@ -3,8 +3,10 @@ import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useMemo } from 'react';
 import type { LatLngTuple } from 'leaflet';
+import { Icon } from 'leaflet';
 import { TowerData } from '../types';
 import { TowerInfo } from './TowerInfo';
+import markerIconPng from 'leaflet/dist/images/marker-icon.png';
 
 interface TowerMapProps {
     towers: TowerData[]
@@ -13,6 +15,7 @@ interface TowerMapProps {
 export function TowerMap({ towers }: TowerMapProps) {
     const mapComponent = useMemo(() => {
         const center: LatLngTuple = [45.5778, -93.258133];
+        const defaultIcon = new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]});
 
         return (
             <div className={`map-container`}>
@@ -26,7 +29,10 @@ export function TowerMap({ towers }: TowerMapProps) {
                             const position: LatLngTuple = [Number(tower.latitude), Number(tower.longitude)];
 
                             return (
-                                <Marker key={`tower-marker-${i}`} position={position}>
+                                <Marker 
+                                    key={`tower-marker-${i}`} 
+                                    position={position}
+                                    icon={defaultIcon}>
                                     <Popup>
                                         <TowerInfo tower={tower}/>
                                     </Popup>

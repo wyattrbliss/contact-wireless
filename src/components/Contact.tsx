@@ -3,16 +3,16 @@ import './Contact.less';
 export function Contact() {
     return (
         <div className={`contact-container card`}>
-            <h1>Contact us</h1>
+            <div className={`section-header`}>Contact us</div>
             <div className={`contact-content`}>
                 <h2>
-                    For information about tower rental - call Contact Wireless, LLC at <br/> 
+                    For information about tower leasing - call Contact Wireless, LLC at <br/> 
                 </h2>
                 <span className={`phone-number`}>702-233-0153</span>
                 <h2>
-                    Or send us an email
+                    Or send an email to conwireless@gmail.com
                 </h2>
-                <form className={`contact-form`} action="mailto:wyattrbliss@gmail.com" method="post" encType="text/plain">
+                <form className={`contact-form`} action="mailto:conwireless@gmail.com" method="post" encType="text/plain">
                     Name:
                     <input type="text" name="name" required placeholder='John Doe'/>
                     E-mail:

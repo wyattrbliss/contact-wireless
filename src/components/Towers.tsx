@@ -26,12 +26,12 @@ export function Towers() {
 
     return (
         <div className={`towers-container card`}>
-            <h1>Tower locations</h1>
+            <div className={`section-header`}>Tower locations</div>
             <div className={`towers-content`}>
                 {isMapView && (
                     <>
                         <div className={`towers-sub-header`}>
-                            <h2>Here's a map of our tower sites</h2>
+                            <h3>Here's a map of our tower sites</h3>
                             <button className={`tower-view-toggle`} onClick={enableList}>Show list</button>
                         </div>
                         <TowerMap towers={towerData} />
@@ -40,7 +40,7 @@ export function Towers() {
                 {!isMapView && (
                     <>
                         <div className={`towers-sub-header`}>
-                            <h2>Here's a list of our tower sites</h2>
+                            <h3>Here's a list of our tower sites</h3>
                             <button className={`tower-view-toggle`} onClick={enableMap}>Show map</button>
                         </div>
                         <TowerList towers={towerData} />
