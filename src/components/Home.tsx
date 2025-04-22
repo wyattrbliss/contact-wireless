@@ -7,13 +7,13 @@ export function Home() {
 
     return (
         <div className={`home-container card`}>
-            <div className={'section-header'}>Building connections through communications infrastructure.</div>
+            <h1>Building connections through communications infrastructure.</h1>
             <p>
-                Contact Wireless, LLC is your local provider for cell tower rental throughout Minnesota & Wisconsin.
+                Contact Wireless, LLC provides tower space for lease in Minnesota, Wisconsin and Washington State.
                 {' '}
-                {`With ${towersNumber} tower sites across three states, we offer access to expand your communications network where you need it the most.`}
+                {`With ${towersNumber} tower sites to choose from, we can help expand your communications network where you need it most.`}
             </p>
-            <button className='home-contact-button' onClick={() => scrollToSection('contact')}>Contact us</button>
+            <button aria-label={'Navigate to the contact section'} className='home-contact-button' onClick={() => scrollToSection('contact')}>Contact us</button>
         </div>
     )
 }

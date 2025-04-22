@@ -1,22 +1,20 @@
 .content-container {
-	padding-top: 80px;
-	height: 100vh;
-	width: 100%;
-	overflow-y: auto;
-	perspective: 10px;
 	padding: 0;
 	overflow-x: hidden;
-	transform-style: preserve-3d;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	padding: 0 16px;
 }
 
 .sections-container {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	align-items: center;
+	max-width: 1000px;
+	width: 100%;
 	margin-top: 60px;
 }
 
@@ -27,45 +25,30 @@ section {
 	padding: 16px 0;
 	transform-style: preserve-3d;
 	z-index: 1;
-	max-width: 1200px;
+	width: 100%;
 }
 
-.tower-png {
-	position: absolute;
-	width: 100%;
+.home-section-container {
 	display: flex;
-	justify-content: flex-end;
-	transform: translateZ(-30px) scale(2.8);
-	z-index: -2;
-	top: 90%;
-	left: 20%;
+	gap: 32px;
 }
 
-.tower-sunset-container {
-	position: absolute;
-	top: -50%;
-	right: 15%;
-	transform: translateZ(4px) scale(0.2);
-	z-index: -1;
-	width: 100%;
-
-	img {
-		width: 100%;
-		border-radius: 8px;
-	}
+.home-section-right {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
 }
 
-.tower-in-field-container {
-	position: absolute;
-	top: 150%;
-	left: 25%;
-	transform: translateZ(-5px) scale(0.5);
-	z-index: -3;
-	width: 100%;
-
+.home-section-left {
+	display: flex;
+	max-width: 500px;
+	margin-right: 32px;
+	border-radius: 48px;
+	overflow: hidden;
+	border: 2px solid #555;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 	img {
 		width: 100%;
-		border-radius: 8px;
 	}
 }
 
@@ -73,28 +56,23 @@ section {
 	background-color: #e6ebef;
 	padding: 16px;
 	border-radius: 8px;
-	// max-width: 80%;
 	border: 2px solid #555;
 	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 @media screen and (max-width: 1280px) {
-	.card {
-		max-width: 75%;
+	.content-container {
+		padding: 60px 144px 0;
 	}
 
-	section {
-		margin: 0 144px;
+	.home-section-left {
+		display: none;
 	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	.card {
-		max-width: 80%;
-	}
-
-	section {
-		margin: 0 100px;
+	.content-container {
+		padding: 0 120px;
 	}
 }
 
@@ -103,8 +81,8 @@ section {
 		max-width: 100%;
 	}
 
-	section {
-		margin: 0 24px;
+	.content-container {
+		padding: 0 24px;
 	}
 }
 
@@ -113,8 +91,8 @@ section {
 		max-width: 100%;
 	}
 
-	section {
-		margin: 0 12px;
+	.content-container {
+		padding: 0 12px;
 	}
 
 	h1 {

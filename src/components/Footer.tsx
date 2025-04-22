@@ -3,7 +3,7 @@ import './Footer.less';
 export function Footer() {
     return (
         <div className={`footer-container`}>
-            ©2024 Contact Wireless, LLC
+            ©2025 Contact Wireless, LLC
         </div>
     )
 }
